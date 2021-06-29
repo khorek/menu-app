@@ -1,5 +1,5 @@
 # React menu
-Меню реализованное на React (Redux)
+SPA menu made with React (Redux)
 
 ## Getting Started
 This project is not necessary install special code or dependencys
