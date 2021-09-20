@@ -33,17 +33,10 @@ class MenuList extends Component {
             )
         })
         return (
-            // <View items={items} />
-            <div>{items}</div>
+            <div className="menuList">{items}</div>
         )
     }
 };
-
-// const View = ({ items }) => {
-//     return (
-//         <ul className='menu__list'>{items}</ul>
-//     )
-// }
 
 const mapStateToProps = (state) => {
     return {

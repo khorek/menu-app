@@ -1,7 +1,7 @@
 # React menu
 SPA menu made with React (Redux)
 
-> - [Live Demo](https://menu-app-pi.vercel.app/) :menu:
+> - [Live Demo](https://menu-app-pi.vercel.app/) :fries:
 
 ## Getting Started
 This project is not necessary install special code or dependencys
