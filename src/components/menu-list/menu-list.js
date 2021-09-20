@@ -17,14 +17,13 @@ class MenuList extends Component {
     }
 
     render() {
-        const { menuItems, loading, error, addedToCart } = this.props;
+        const { menuItems, loading, error, addedToCart, } = this.props;
         if (error) {
             return <Error />
         }
         if (loading) {
             return <Spinner />
         }
-
         const items = menuItems.map(menuItem => {
             return (<MenuListItem
                 key={menuItem.id}
@@ -34,22 +33,23 @@ class MenuList extends Component {
             )
         })
         return (
-            <View items={items} />
+            // <View items={items} />
+            <div>{items}</div>
         )
     }
 };
 
-const View = ({ items }) => {
-    return (
-        <ul className='menu__list'>{items}</ul>
-    )
-}
+// const View = ({ items }) => {
+//     return (
+//         <ul className='menu__list'>{items}</ul>
+//     )
+// }
 
 const mapStateToProps = (state) => {
     return {
         menuItems: state.menu,
         loading: state.loading,
-        error: state.error
+        error: state.error,
     }
 }
 

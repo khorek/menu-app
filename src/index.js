@@ -6,12 +6,10 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import ErrorBoudry from './components/error-boundry';
 import RestoService from './services/resto-service';
 import RestoServiceContext from './components/resto-service-context';
-
 import store from './store';
-
 import './index.scss';
 
-const restoService = new RestoService();
+const restoService = new RestoService()
 
 ReactDOM.render(
     <Provider store={store}>
