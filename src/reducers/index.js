@@ -36,7 +36,8 @@ const reducer = (state = initialState, action) => {
                 const itemInState = state.items.find(item => item.id === id);
                 const newItem = {
                     ...itemInState,
-                    qtty: ++itemInState.qtty
+                    qtty: ++itemInState.qtty,
+                    totalPricePerUnit: itemInState.qtty * itemInState.price
                 }
                 return {
                     ...state,
@@ -55,7 +56,8 @@ const reducer = (state = initialState, action) => {
                 price: item.price,
                 url: item.url,
                 id: item.id,
-                qtty: 1
+                qtty: 1,
+                totalPricePerUnit: (item.qtty >= 1 ? item.qtty : 1) * item.price 
             }
 
             return {

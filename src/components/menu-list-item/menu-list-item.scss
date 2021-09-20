@@ -39,5 +39,17 @@
         color: #fff;
         font-size: 16px;
         cursor: pointer;
+        &--remove {
+            height: 40px;
+            border: none;    
+            width: 130px;
+            background-color: red;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
     }
+
 }
