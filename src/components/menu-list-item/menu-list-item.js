@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './menu-list-item.scss';
 
-const MenuListItem = ({ menuItem, onAddToCart, items }) => {
+const MenuListItem = ({ menuItem, onAddToCart, items, onRemoveFromCart }) => {
     const { title, price, url, category, } = menuItem;
     const [count, setCount] = useState(0);
 
-    const addTotalCost = () => {
+    const addTotalLocalCost = () => {
         setCount(() => count + 1)
     }
 
-    const removeTotalCost = () => {
+    const removeTotalLocalCost = () => {
         setCount(() => count > 0 ? count - 1 : 0)
     }
 
@@ -32,15 +32,41 @@ const MenuListItem = ({ menuItem, onAddToCart, items }) => {
                             count > 0 ? <span className="menu__price">Total: <span>{count * price}$</span></span> : ''
                         }
                     </div>
-
                 </Link>
+
+                <div className="paymentWrap">
+                    <div className="btn-group paymentBtnGroup btn-group-justified" data-toggle="buttons">
+                        <label className="btn paymentMethod active">
+                            <div className="method visa"></div>
+                            <input type="radio" name="options" checked />
+                        </label>
+                        <label className="btn paymentMethod">
+                            <div className="method master-card"></div>
+                            <input type="radio" name="options" / >
+                        </label>
+                        <label className="btn paymentMethod">
+                            <div className="method amex"></div>
+                            <input type="radio" name="options" />
+                        </label>
+                        <label className="btn paymentMethod">
+                            <div className="method vishwa"></div>
+                            <input type="radio" name="options" />
+                        </label>
+                    </div>
+                </div>
+
+
+
                 <div>
                     <button onClick={() => {
+                        addTotalLocalCost()
                         onAddToCart()
-                        addTotalCost()
                     }} className="menu__btn">Add to cart</button>
                     {
-                        count > 0 ? <button onClick={() => { removeTotalCost() }} className="menu__btn--remove">Remove</button> : ''
+                        count > 0 ? <button onClick={() => {
+                            removeTotalLocalCost()
+                            onRemoveFromCart()
+                        }} className="menu__btn--remove">Remove</button> : ''
                     }
                 </div>
             </li>

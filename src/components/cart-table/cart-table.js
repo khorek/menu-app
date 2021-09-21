@@ -16,18 +16,19 @@ const CartTable = ({ items, deleteFromCart, total, addedToCart, clearCart }) => 
 
                         return (
                             <div key={id}>
-                                <Link to={`/${id}`}>
-                                    <div className="cart__item" key={id}>
+                                <div className="cart__item" key={id}>
+                                    <Link to={`/${id}`}>
                                         <img src={url} className="cart__item-img" alt={title}></img>
                                         <div className="cart__item-title">{title}</div>
                                         <div className="cart__item-price">Price: {price}$</div>
                                         <div className="cart__item-qtty">Qty: {qtty}pcs</div>
                                         <div className="cart__item-total-price">Total: {totalPricePerUnit}$</div>
+                                    </Link>
+                                    <div className='cart__item-buttons-wrapper'>
+                                        <button onClick={() => addedToCart(id)} className="menu__btn">Add + </button>
+                                        <button onClick={() => deleteFromCart(id)} className="menu__btn--remove">Remove - </button>
                                     </div>
-                                </Link>
-                                <button onClick={() => addedToCart(id)} className="menu__btn">Add + </button>
-                                <button onClick={() => deleteFromCart(id)} className="menu__btn--remove">Remove - </button>
-
+                                </div>
                             </div>
                         )
                     })

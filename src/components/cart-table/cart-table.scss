@@ -19,6 +19,7 @@
         flex-direction: column;
         align-items: center;
         margin-top: 40px;
+        max-width: 90%;
         border: 1px solid rgba(256,256,256, .2);
         background-color: rgba(0,0,0,.7);
         box-shadow: 0 0 20px rgba(256,256,256, .1);
@@ -29,13 +30,11 @@
             font-size: 24px;
         }
         &-price, &-qtty {
-            // width: 250px;
             text-align: center;
             color: #fff;
             font-size: 16px;
         }
         &-total-price {
-            // width: 250px;
             text-align: center;
             color: #fff;
             font-size: 20px;
@@ -45,7 +44,11 @@
             width: 250px;
             object-fit: cover;
         }
+        &-buttons-wrapper {
+            margin: 10px auto;
+        }
     }
+
     &__close {
         position: absolute;
         width: 25px;
@@ -80,5 +83,8 @@
             margin-left: 5px;
         }
 
+    }
+    a {
+        text-decoration: none;
     }
 }
