@@ -11,7 +11,7 @@ const AppHeader = ({ total, clearCart }) => {
             <Link to={'/'} className="header__link">
                 <button type="button" class="btn btn-info">Menu</button>
             </Link>
-            <button className="menu__btn" onClick={() => clearCart()}>Очистить корзину</button>
+            <button className="menu__btn" onClick={() => clearCart()}>Clear cart</button>
             <Link to='/cart' className="header__link" href="#">
                 <img className="header__cart" src={cartIcon} alt="cart"></img>
                 Total: {total} $

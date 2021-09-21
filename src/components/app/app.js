@@ -1,7 +1,8 @@
 import React from 'react';
 import { MainPage, CartPage, ItemPage } from '../pages';
 import AppHeader from '../app-header';
-import Background from './food-bg.jpg';
+import Background from '../../assets/img/food-bg.jpg';
+
 import { Route, Switch } from 'react-router-dom';
 
 const App = () => {

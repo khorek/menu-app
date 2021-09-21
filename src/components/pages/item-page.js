@@ -36,10 +36,6 @@ class ItemPage extends Component {
 
         return (
             <div className="item_page">
-                {
-                    this.props.items.map(i => console.log(i))
-                }
-
                 <div className="menu__item item_block">
                     <div className="menu__title">{title}</div>
                     <img className="menu__img" src={url} alt={title}></img>
@@ -49,13 +45,17 @@ class ItemPage extends Component {
                             this.props.items.map(i => {
                                 if (i.totalPricePerUnit > 0 && i.id === id) {
                                     console.log(i);
-                                    return <span>Total: {i.totalPricePerUnit}$ </span>
+                                    return  <span>Total: {i.totalPricePerUnit}$ </span>
                                 }
                             })
                         }
                     </div>
                     <button className="menu__btn" onClick={() => this.props.addedToCart(id)}>Add to cart</button>
                     <button className="menu__btn--remove" onClick={() => this.props.deleteFromCart(id)}>Remove</button>
+
+                    {
+                        
+                    }
                     <span className={`menu__category_Img ${category}`}></span>
                 </div>
             </div>

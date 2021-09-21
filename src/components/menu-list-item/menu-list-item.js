@@ -29,7 +29,7 @@ const MenuListItem = ({ menuItem, onAddToCart, items, onRemoveFromCart }) => {
                     <div>
                         <span className="menu__price">Price pcs: <span>{price}$ </span></span>
                         {
-                            count > 0 ? <span className="menu__price">Total: <span>{count * price}$</span></span> : ''
+                            count > 0 ? <span className="menu__price">Total: <span>{count * price}$</span></span> : null
                         }
                     </div>
                 </Link>
@@ -42,7 +42,7 @@ const MenuListItem = ({ menuItem, onAddToCart, items, onRemoveFromCart }) => {
                         </label>
                         <label className="btn paymentMethod">
                             <div className="method master-card"></div>
-                            <input type="radio" name="options" / >
+                            <input type="radio" name="options" />
                         </label>
                         <label className="btn paymentMethod">
                             <div className="method amex"></div>
@@ -54,7 +54,6 @@ const MenuListItem = ({ menuItem, onAddToCart, items, onRemoveFromCart }) => {
                         </label>
                     </div>
                 </div>
-
 
 
                 <div>
