@@ -8,7 +8,6 @@ import RestoService from './services/resto-service';
 import RestoServiceContext from './components/resto-service-context';
 import store from './store';
 import './index.scss';
-// Importing the Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const restoService = new RestoService()

@@ -32,8 +32,6 @@ class ItemPage extends Component {
         const { title, url, category, price, id } = item;
         console.log('ITEM ID', id);
 
-
-
         return (
             <div className="item_page">
                 <div className="menu__item item_block">
