@@ -59,4 +59,26 @@
         border: 1px solid #fff;
         cursor: pointer;
     }
+    .menu__btn {
+        width: 150px;
+        height: 40px;
+        border: none;
+        background-color: #29a745;
+        border-radius: 4px;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        &--remove {
+            height: 40px;
+            border: none;    
+            width: 130px;
+            background-color: red;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+    }
 }

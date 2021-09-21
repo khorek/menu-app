@@ -7,7 +7,7 @@
     padding: 0 50px;
     &__link {
         display: flex;
-        margin-right: 40px;
+        margin-right: 5px;
         font-size: 18px;
         color: #fff;
         text-decoration: none;
@@ -16,4 +16,7 @@
         width: 20px;
         margin-right: 10px;
     }
+}
+.menu__btn {
+    margin: auto 5px;
 }

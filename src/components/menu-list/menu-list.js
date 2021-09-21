@@ -27,13 +27,10 @@ class MenuList extends Component {
 
         const itemsList = menuItems.map((menuItem) => {
             return (
-                <>
-                    <MenuListItem
-                        key={menuItem.id}
+                    <MenuListItem key={menuItem.id}
                         menuItem={menuItem}
                         items={items}
                         onAddToCart={() => addedToCart(menuItem.id)} />
-                </>
             )
         })
 

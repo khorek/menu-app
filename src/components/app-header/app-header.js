@@ -1,15 +1,17 @@
 import React from 'react';
 import cartIcon from './shopping-cart-solid.svg';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './app-header.scss';
+import { clearCart } from '../../actions';
 
-const AppHeader = ({total}) => {
+const AppHeader = ({ total, clearCart }) => {
     return (
         <header className="header">
             <Link to={'/'} className="header__link">
-                Menu
+                <button type="button" class="btn btn-info">Menu</button>
             </Link>
+            <button className="menu__btn" onClick={() => clearCart()}>Очистить корзину</button>
             <Link to='/cart' className="header__link" href="#">
                 <img className="header__cart" src={cartIcon} alt="cart"></img>
                 Total: {total} $
@@ -25,6 +27,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = {
+    clearCart
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(AppHeader);
+export default connect(mapStateToProps, mapDispatchToProps)(AppHeader);
