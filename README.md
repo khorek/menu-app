@@ -3,7 +3,7 @@ SPA menu made with React (Redux). You can add and remove products from cart. Cle
 
 > - [Live Demo](https://menu-app-pi.vercel.app/) :fries:
 
-![screenshot](src/assets/img/screenshot.png "screenshot")
+![screenshot](src/assets/img/screenshot.png "screenshot"){:target="_blank"}
 
 ## Practiced:
 - React 
