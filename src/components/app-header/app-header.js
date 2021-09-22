@@ -16,6 +16,8 @@ const AppHeader = ({ total, clearCart }) => {
                 <img className="header__cart" src={cartIcon} alt="cart"></img>
                 Total: {total} $
             </Link>
+
+
         </header>
     )
 };

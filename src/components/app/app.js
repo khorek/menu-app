@@ -1,5 +1,5 @@
 import React from 'react';
-import { MainPage, CartPage, ItemPage } from '../pages';
+import { MainPage, CartPage, ItemPage, CategoryPage } from '../pages';
 import AppHeader from '../app-header';
 import Background from '../../assets/img/food-bg.jpg';
 
@@ -12,7 +12,8 @@ const App = () => {
             <Switch>
                 <Route path='/' exact component={MainPage} />
                 <Route path='/cart' exact component={CartPage} />
-                <Route path='/:id' component={ItemPage} />
+                <Route path='/:category' exact component={CategoryPage} />
+                <Route path='/:category/:id' exact component={ItemPage} />
             </Switch>
         </div>
     )
