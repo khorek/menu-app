@@ -1,9 +1,9 @@
 # React menu
 SPA menu made with React (Redux). You can add and remove products from cart. Clear cart. And select product category.
 
-> - [Live Demo](https://menu-app-pi.vercel.app/) :fries:
+> - [Live Demo](https://menu-app-pi.vercel.app/){:target="_blank"} :fries:
 
-![screenshot](src/assets/img/screenshot.png "screenshot"){:target="_blank"}
+![screenshot](src/assets/img/screenshot.png "screenshot")
 
 ## Practiced:
 - React 
