@@ -16,7 +16,6 @@ class ItemPage extends Component {
                 .then(res => this.props.menuLoaded(res))
                 .catch(error => this.props.menuError());
         }
-        console.log('render item');
     }
 
     render() {
@@ -43,7 +42,7 @@ class ItemPage extends Component {
                         {
                             this.props.items.map(i => {
                                 if (i.totalPricePerUnit > 0 && i.id === id) {
-                                    return <span>Total: {i.totalPricePerUnit}$ </span>
+                                    return <b>Total: <span>{i.totalPricePerUnit}$</span> </b>
                                 }
                             })
                         }
