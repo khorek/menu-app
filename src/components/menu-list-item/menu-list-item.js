@@ -21,11 +21,9 @@ const MenuListItem = ({ menuItem, onAddToCart, items, onRemoveFromCart }) => {
     return (
         <>
             <li className="menu__item" key={menuItem.id}>
-                <Link to={`/${menuItem.id}`} className='menu__link'>
+                <Link to={`${category}/${menuItem.id}`} className='menu__link'>
                     <div className="menu__title">{title}</div>
                     <img className="menu__img" src={url} alt={title}></img>
-                    <div className="menu__category">Category:<span> {category}</span>
-                    </div>
                     <div>
                         <span className="menu__price">Price pcs: <span>{price}$ </span></span>
                         {
@@ -33,6 +31,10 @@ const MenuListItem = ({ menuItem, onAddToCart, items, onRemoveFromCart }) => {
                         }
                     </div>
                 </Link>
+                <Link to={`/${category}`} className='menu__link'>
+                    <div className="menu__category">Category: <span> {category}</span></div>
+                </Link>
+
 
                 <div className="paymentWrap">
                     <div className="btn-group paymentBtnGroup btn-group-justified" data-toggle="buttons">

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './cart-table.scss';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { addedToCart, deleteFromCart, clearCart } from '../../actions'
 
-const CartTable = ({ items, deleteFromCart, total, addedToCart, clearCart }) => {
+const CartTable = ({ items, deleteFromCart, total, addedToCart, }) => {
     return (
         <>
             <div className="cart__title">Ваш заказ:</div>
