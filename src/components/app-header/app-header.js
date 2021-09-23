@@ -9,7 +9,7 @@ const AppHeader = ({ total, clearCart }) => {
     return (
         <header className="header">
             <Link to={'/'} className="header__link">
-                <button type="button" class="btn btn-info">Menu</button>
+                <button type="button" className="btn btn-info">Menu</button>
             </Link>
             <button className="menu__btn" onClick={() => clearCart()}>Clear cart</button>
             <Link to='/cart' className="header__link" href="#">

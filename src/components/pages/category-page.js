@@ -28,28 +28,29 @@ class CategoryPage extends Component {
 
         const items = categoryItems.map((el) => {
             const { title, price, url, category, id } = el;
-            return <div className="item_page">
-                <div className="menu__item item_block category-page__item">
-                    <Link to={`${category}/${id}`} className='menu__link'>
-                        <div className="menu__title">{title}</div>
-                        <img className="menu__img" src={url} alt={title}></img>
-                    </Link>
+            return (
+                <div className="item_page" key={id} >
+                    <div className="menu__item item_block category-page__item">
+                        <Link to={`${category}/${id}`} className='menu__link'>
+                            <div className="menu__title">{title}</div>
+                            <img className="menu__img" src={url} alt={title}></img>
+                        </Link>
 
-                    <div className="menu__category">Category: <span>{category}</span></div>
-                    <div className="menu__price">Price: <span>{price}$ </span>
-                        {
-                            this.props.items.map(i => {
-                                if (i.totalPricePerUnit > 0 && i.id === id) {
-                                    return <b>Total: <span>{i.totalPricePerUnit}$</span> </b>
-                                }
-                            })
-                        }
+                        <div className="menu__category">Category: <span>{category}</span></div>
+                        <div className="menu__price">Price: <span>{price}$ </span>
+                            {
+                                this.props.items.map(i => {
+                                    if (i.totalPricePerUnit > 0 && i.id === id) {
+                                        return <b key={i.id}>Total: <span>{i.totalPricePerUnit}$</span> </b>
+                                    }
+                                })
+                            }
+                        </div>
+                        <button className="menu__btn" onClick={() => this.props.addedToCart(id)}>Add to cart</button>
+                        <button className="menu__btn--remove" onClick={() => this.props.deleteFromCart(id)}>Remove</button>
                     </div>
-                    <button className="menu__btn" onClick={() => this.props.addedToCart(id)}>Add to cart</button>
-                    <button className="menu__btn--remove" onClick={() => this.props.deleteFromCart(id)}>Remove</button>
                 </div>
-            </div>
-
+            )
         })
 
         return (

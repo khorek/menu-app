@@ -42,7 +42,7 @@ class ItemPage extends Component {
                         {
                             this.props.items.map(i => {
                                 if (i.totalPricePerUnit > 0 && i.id === id) {
-                                    return <b>Total: <span>{i.totalPricePerUnit}$</span> </b>
+                                    return <b key={i.id}>Total: <span>{i.totalPricePerUnit}$</span> </b>
                                 }
                             })
                         }

@@ -40,7 +40,7 @@ const MenuListItem = ({ menuItem, onAddToCart, items, onRemoveFromCart }) => {
                     <div className="btn-group paymentBtnGroup btn-group-justified" data-toggle="buttons">
                         <label className="btn paymentMethod active">
                             <div className="method visa"></div>
-                            <input type="radio" name="options" checked />
+                            <input type="radio" name="options" defaultChecked />
                         </label>
                         <label className="btn paymentMethod">
                             <div className="method master-card"></div>
