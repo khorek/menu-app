@@ -17,7 +17,7 @@ const CartTable = ({ items, deleteFromCart, total, addedToCart, }) => {
                         return (
                             <div key={id}>
                                 <div className="cart__item" key={id}>
-                                    <Link to={`${category}/${id}`}>
+                                    <Link to={`/${category}/${id}`}>
                                         <img src={url} className="cart__item-img" alt={title}></img>
                                         <div className="cart__item-title">{title}</div>
                                         <div className="cart__item-price">Price: {price}$</div>
