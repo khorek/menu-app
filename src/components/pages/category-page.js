@@ -75,7 +75,6 @@ const mapDispathToProps = {
     menuError,
     addedToCart,
     deleteFromCart
-
 }
 
 export default WithRestoService()(connect(mapStateToProps, mapDispathToProps)(CategoryPage));
