@@ -7,8 +7,8 @@ import { addedToCart, deleteFromCart, clearCart } from '../../actions'
 const CartTable = ({ items, deleteFromCart, total, addedToCart, }) => {
     return (
         <>
-            <div className="cart__title">Ваш заказ:</div>
-            <div className="cart__title">Итого: {total}$</div>
+            <div className="cart__title">Your order:</div>
+            <div className="cart__title">Total: {total}$</div>
             <div className="cart__list">
                 {
                     items.map(item => {
