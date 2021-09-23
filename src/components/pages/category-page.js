@@ -43,6 +43,7 @@ class CategoryPage extends Component {
                                     if (i.totalPricePerUnit > 0 && i.id === id) {
                                         return <b key={i.id}>Total: <span>{i.totalPricePerUnit}$</span> </b>
                                     }
+                                    return null
                                 })
                             }
                         </div>
