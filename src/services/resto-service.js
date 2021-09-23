@@ -11,11 +11,11 @@ export default class RestoService {
     }
 
     async getMenuItems () {
-        return await this.getResource(`/menu/`);
+        return await this.getResource(``);
     }
 
     async getItem(id) {
-        const res = await this.getResource('/menu/');
+        const res = await this.getResource('');
         const item = res.find((el) => {
             return el.id === +id;
         })
