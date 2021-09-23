@@ -12,12 +12,12 @@ const CartTable = ({ items, deleteFromCart, total, addedToCart, }) => {
             <div className="cart__list">
                 {
                     items.map(item => {
-                        const { title, price, url, id, qtty, totalPricePerUnit } = item;
+                        const { title, price, url, id, qtty, category, totalPricePerUnit } = item;
 
                         return (
                             <div key={id}>
                                 <div className="cart__item" key={id}>
-                                    <Link to={`/${id}`}>
+                                    <Link to={`${category}/${id}`}>
                                         <img src={url} className="cart__item-img" alt={title}></img>
                                         <div className="cart__item-title">{title}</div>
                                         <div className="cart__item-price">Price: {price}$</div>
