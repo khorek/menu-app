@@ -1,5 +1,5 @@
 export default class RestoService {
-    _apiBase = 'https://my-json-server.typicode.com/khorek/db/menu';
+    _apiBase = 'https://my-json-server.typicode.com/khorek/db/';
 
     async getResource(url) {
         const res = await fetch(`${this._apiBase}${url}`);
